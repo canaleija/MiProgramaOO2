@@ -5,6 +5,7 @@
  */
 package miprogramaoo2;
 
+import objetos.Docente;
 import objetos.Fecha;
 import objetos.Persona;
 
@@ -18,10 +19,19 @@ public class MiProgramaOO2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Persona laura = new Persona("Laura Garza", 34,'f', 1.66,
-               new Fecha(12, 12, 1995));
-               
-       System.out.println(laura.toString());
+      
+        Docente acuna = new Docente("Hector Alejandro", 30, 'm', 1.80, 
+                 new Fecha(23, 11, 1985), new Fecha(1, 8, 2014), 5000, "Maestría") {
+            @Override
+            public void salude(String saludo) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        
+        System.out.println(acuna.getEstatura());
+        acuna.getMaterias().add("Introduccion a la Programación");
+        
+        System.out.println(acuna.toString());
     }
     
 }

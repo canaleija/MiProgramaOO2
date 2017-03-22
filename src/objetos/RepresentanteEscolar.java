@@ -11,4 +11,6 @@ package objetos;
  */
 public interface RepresentanteEscolar {
     
+    void salude(String saludo);
+    
 }

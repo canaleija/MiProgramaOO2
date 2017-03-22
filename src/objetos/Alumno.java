@@ -9,7 +9,7 @@ package objetos;
  *
  * @author Roberto Cruz Leija
  */
-public class Alumno extends Persona{
+public class Alumno extends Persona implements RepresentanteEscolar{
     
     private Fecha fechaIngreso;
     // matricula del estudiante
@@ -83,6 +83,12 @@ public class Alumno extends Persona{
      */
     public void setCarrera(String carrera) {
         this.carrera = carrera;
+    }
+
+    @Override
+    public void salude(String saludo) {
+        System.out.println("Huelum! soy "
+                +super.getNombre());
     }
     
 }
